@@ -1,9 +1,9 @@
-import './vrarmik/three-vrm.js';
-import {fixSkeletonZForward} from './vrarmik/SkeletonUtils.js';
-import PoseManager from './vrarmik/PoseManager.js';
-import ShoulderTransforms from './vrarmik/ShoulderTransforms.js';
-import LegsManager from './vrarmik/LegsManager.js';
-import MicrophoneWorker from './microphone-worker.js';
+import '../../vrarmik/three-vrm.js';
+import {fixSkeletonZForward} from '../../vrarmik/SkeletonUtils.js';
+import PoseManager from '../../vrarmik/PoseManager.js';
+import ShoulderTransforms from '../../vrarmik/ShoulderTransforms.js';
+import LegsManager from '../../vrarmik/LegsManager.js';
+import MicrophoneWorker from '../../microphone-worker.js';
 import skeletonString from './skeleton.js';
 
 const zeroVector = new THREE.Vector3();
@@ -452,8 +452,8 @@ class Avatar {
 	    Chest,
 	    Neck,
 	    Head,
-	    /* Eye_L,
-	    Eye_R, */
+	    Eye_L,
+	    Eye_R,
 
 	    Left_shoulder,
 	    Left_arm,
