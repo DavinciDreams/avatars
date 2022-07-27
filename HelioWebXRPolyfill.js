@@ -8,7 +8,7 @@ if ( /(Helio)/g.test( navigator.userAgent ) && "xr" in navigator ) {
 
 	const isHelio96 = navigator.userAgent.includes("Chrome/73");
 
-	// WebXRManager - XR.supportSession() Polyfill - WebVR.js line 147
+	 WebXRManager - XR.supportSession() Polyfill - WebVR.js line 147
 
 	if (
 		"supportsSession" in navigator.xr === false &&
@@ -39,7 +39,7 @@ if ( /(Helio)/g.test( navigator.userAgent ) && "xr" in navigator ) {
 				tempRequestSession( sessionType )
 					.then( function ( session ) {
 
-						// WebXRManager - xrFrame.getPose() Polyfill - line 279
+						WebXRManager - xrFrame.getPose() Polyfill - line 279
 
 						const tempRequestAnimationFrame = session.requestAnimationFrame.bind(
 							session
@@ -49,8 +49,8 @@ if ( /(Helio)/g.test( navigator.userAgent ) && "xr" in navigator ) {
 
 							return tempRequestAnimationFrame( function ( time, frame ) {
 
-								// WebXRManager - xrFrame.getViewerPose() Polyfill - line 279
-								// Transforms view.viewMatrix to view.transform.inverse.matrix
+						         WebXRManager - xrFrame.getViewerPose() Polyfill - line 279
+								 Transforms view.viewMatrix to view.transform.inverse.matrix
 
 								const tempGetViewerPose = frame.getViewerPose.bind( frame );
 
@@ -72,7 +72,7 @@ if ( /(Helio)/g.test( navigator.userAgent ) && "xr" in navigator ) {
 
 								};
 
-								// WebXRManager - xrFrame.getPose() Polyfill - line 259
+								 WebXRManager - xrFrame.getPose() Polyfill - line 259
 
 								const tempGetPose = (isHelio96 ? null : frame.getPose.bind( frame ));
 
@@ -105,7 +105,7 @@ if ( /(Helio)/g.test( navigator.userAgent ) && "xr" in navigator ) {
 
 						};
 
-						// WebXRManager - xrFrame.getPose( inputSource.targetRaySpace, referenceSpace) Polyfill - line 279
+						WebXRManager - xrFrame.getPose( inputSource.targetRaySpace, referenceSpace) Polyfill - line 279
 
 						const tempGetInputSources = session.getInputSources.bind( session );
 
@@ -131,9 +131,9 @@ if ( /(Helio)/g.test( navigator.userAgent ) && "xr" in navigator ) {
 
 						};
 
-						// WebXRManager - xrSession.getInputSources() Polyfill Line 132 - 136
+						WebXRManager - xrSession.getInputSources() Polyfill Line 132 - 136
 
-						/* session.inputSources = */Object.defineProperty(
+						session.inputSources = */Object.defineProperty(
 							session,
 							"inputSources",
 							{
@@ -141,7 +141,7 @@ if ( /(Helio)/g.test( navigator.userAgent ) && "xr" in navigator ) {
 							}
 						);
 
-						// WebXRManager - xrSession.updateRenderState() Polyfill Line 129
+						WebXRManager - xrSession.updateRenderState() Polyfill Line 129
 
 						if (isHelio96) {
 
@@ -149,7 +149,7 @@ if ( /(Helio)/g.test( navigator.userAgent ) && "xr" in navigator ) {
 
 								session.baseLayer = baseLayer;
 
-								// WebXRManager - xrSession.renderState.baseLayer Polyfill Line 219
+								WebXRManager - xrSession.renderState.baseLayer Polyfill Line 219
 
 								session.renderState = {
 									baseLayer: baseLayer
@@ -159,7 +159,7 @@ if ( /(Helio)/g.test( navigator.userAgent ) && "xr" in navigator ) {
 
 						}
 
-						// WebXRManager - xrSession.requestReferenceSpace() Polyfill Line 130
+					     WebXRManager - xrSession.requestReferenceSpace() Polyfill Line 130
 
 						const tempRequestReferenceSpace = session.requestReferenceSpace.bind(
 							session
